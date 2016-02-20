@@ -1,0 +1,15 @@
+{
+  "name": "babylon-test",
+  "version": "0.0.1",
+  "description": "FE test for Babylon",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "christopher weir",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-webserver": "^0.9.1"
+  }
+}
