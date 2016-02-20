@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "FE test for Babylon",
   "main": "server.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +12,10 @@
   "devDependencies": {
     "gulp": "*",
     "gulp-concat": "^2.6.0",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.7"
   }
 }
