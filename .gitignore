@@ -1,3 +1,5 @@
 node_modules
 .DS_Store
 bower_components
+public/js/app.js
+public/js/lib.js
