@@ -3,9 +3,11 @@
 
 // Init the application configuration module for AngularJS application
 var ApplicationConfiguration = (function() {
+
     // Init module configuration options
     var applicationModuleName = 'babylonTest';
     var applicationModuleVendorDependencies = [
+        'ui.router'
     ];
 
     // Add a new vertical module
