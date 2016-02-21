@@ -12,6 +12,9 @@
   "devDependencies": {
     "gulp": "*",
     "gulp-concat": "^2.6.0",
+    "gulp-html2js": "^0.4.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
     "gulp-webserver": "^0.9.1",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.21",
