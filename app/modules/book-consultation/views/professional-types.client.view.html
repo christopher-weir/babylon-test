@@ -1,0 +1,8 @@
+<li ng-repeat="type in professionals" ng-click="setType( type )">
+    <p>
+        {{ type.label }}
+    </p>
+    <p ng-if="type.subLabel">
+        subLabel: {{ type.subLabel }}
+    </p>
+</li>

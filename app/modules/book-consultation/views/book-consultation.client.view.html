@@ -1,0 +1,64 @@
+<section class="section--center mdl-grid mdl-grid--no-spacing page-title">
+    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+        <h2>book consultation</h2>
+    </div>
+</section>
+
+
+
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+
+
+    <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone book-consultation-form">
+
+        <form name="consultationForm">
+
+        <div class="mdl-card__actions form--section">
+
+            <h4>test</h4>
+            <p>
+                {{ consultationFormData }}
+            </p>
+        </div>
+
+        <div class="mdl-card__actions form--section">
+            <header>
+                <h4>test</h4>
+            </header>
+
+            <div class="form--content">
+                <ul class="form--user" consultation-users  ng-model="consultationFormData.user" family="familyMembers">
+
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div class="mdl-card__actions form--section">
+            <header>
+                <h4>professionals</h4>
+            </header>
+
+            <div class="form--content">
+                <ul class="form--user" professional-types  ng-model="consultationFormData.professionalType" professionals="professionals">
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div class="mdl-card__actions form--section">
+            <header>
+                <h4>professionals</h4>
+            </header>
+
+            <div class="form--content" professional-users  ng-model="consultationFormData.professional" professionals="consultationFormData.professionalType.professionals"></div>
+        </div>
+
+
+        </form>
+    </div>
+
+
+</section>
