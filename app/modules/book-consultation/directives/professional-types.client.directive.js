@@ -11,10 +11,19 @@ angular.module('book-consultation')
                     professionals : '=professionals',
                     ngModel: '='
                 },
+
                 link: function(scope, element, attrs, ngModel ) {
 
                     scope.setType = function( _type ){
                         scope.ngModel = _type;
+                    };
+
+
+
+                    scope.isActive = function( _type ){
+                        if ( scope.ngModel === _type ) {
+                            return 'active';
+                        }
                     };
 
                 },

@@ -2,7 +2,8 @@
 
 angular.module('book-consultation')
     .directive('consultationUsers', [
-        function(  ) {
+        '$compile',
+        function( $compile ) {
             return {
 
                 restrict: 'A',
@@ -14,32 +15,29 @@ angular.module('book-consultation')
                 link: function(scope, element, attrs, ngModel ) {
 
                     scope.addUser = function(){
-                        scope.familyMembers.push({
-                            name: 'bob 3',
-                            img: './img/test.jpg'
-                        });
+
+                        var generatedTemplate = '<add-modal ver="app/modules/book-consultation/views/add-user.client.view.html" controller-name="AddUserCtrl" title="\'Add User\'"></add-modal>';
+                        angular.element(document.getElementById('space-for-buttons')).append($compile(generatedTemplate)(scope));
+
+
+                        // scope.familyMembers.push({
+                        //     name: 'bob 3',
+                        //     img: './img/user.png'
+                        // });
                     };
 
                     scope.setUser = function( _user ){
                         scope.ngModel = _user;
                     };
 
-                },
+                    scope.isActive = function( _user ){
+                        if ( scope.ngModel === _user ) {
+                            return 'active';
+                        }
+                    };
 
-                template:   '' +
-                    '<li ng-repeat="user in familyMembers" ng-click="setUser( user )">' +
-                        '<div class="user-img">' +
-                            '<img />' +
-                        '</div>' +
-                        '<div>' +
-                            '<p>' +
-                                '{{ user.name }}' +
-                            '</p>' +
-                        '</div>' +
-                    '</li>' +
-                    '<li class="form--user-add" ng-click="addUser()">' +
-                        'add' +
-                    '</li>'
+                },
+                templateUrl:   'app/modules/book-consultation/views/consultation-users.client.view.html'
             };
         }
     ]

@@ -1,6 +1,6 @@
 <section class="section--center mdl-grid mdl-grid--no-spacing page-title">
     <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
-        <h2>book consultation</h2>
+        <h2>Book a Consultation</h2>
     </div>
 </section>
 
@@ -15,22 +15,13 @@
 
         <div class="mdl-card__actions form--section">
 
-            <h4>test</h4>
-            <p>
-                {{ consultationFormData }}
-            </p>
-        </div>
 
-        <div class="mdl-card__actions form--section">
             <header>
-                <h4>test</h4>
+                <h4>Book this consultation for</h4>
             </header>
 
             <div class="form--content">
-                <ul class="form--user" consultation-users  ng-model="consultationFormData.user" family="familyMembers">
-
-                </ul>
-
+                <ul class="form--iconlist" consultation-users  ng-model="consultationFormData.user" family="familyMembers"></ul>
             </div>
         </div>
 
@@ -41,19 +32,40 @@
             </header>
 
             <div class="form--content">
-                <ul class="form--user" professional-types  ng-model="consultationFormData.professionalType" professionals="professionals">
+                <ul class="form--iconlist" professional-types  ng-model="consultationFormData.professionalType" professionals="professionals">
                 </ul>
 
             </div>
         </div>
 
 
-        <div class="mdl-card__actions form--section">
+        <div class="mdl-card__actions form--section" ng-if="consultationFormData.professionalType.professionals">
             <header>
-                <h4>professionals</h4>
+                <h4>Select the {{ consultationFormData.professionalType.label }}</h4>
             </header>
 
             <div class="form--content" professional-users  ng-model="consultationFormData.professional" professionals="consultationFormData.professionalType.professionals"></div>
+        </div>
+
+
+
+
+        <div class="mdl-card__actions form--section" ng-if="consultationFormData.professional">
+            <header>
+                <h4>Next available appointment</h4>
+            </header>
+
+            <div class="form--content" professional-time ng-model="consultationFormData.time" times="consultationFormData.professional.avaliable"></div>
+        </div>
+
+
+
+        <div class="mdl-card__actions form--section">
+
+            <h4>Book this consultation for</h4>
+            <p>
+                {{ consultationFormData }}
+            </p>
         </div>
 
 

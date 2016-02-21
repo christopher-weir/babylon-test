@@ -15,7 +15,7 @@
         .form--content
             width: 100%
 
-        .form--user
+        .form--iconlist
             width: 100%
             list-style: none
             margin: 0px
@@ -24,10 +24,81 @@
             justify-content: center
 
             li
-                width: 100px
-                height: 100px
+                width: auto
+                height: auto
                 position: relative
+                cursor: pointer
 
-                .user-img
+                &.form--iconlist-default
+                    margin-right: 60px
 
-                .user-meta
+                .iconlist-or
+                    position: absolute
+                    right: -30px
+                    top: 20px
+                    color: #E4E4E4
+
+                .iconlist-img
+                    width: 60px
+                    height: 60px
+                    margin: 0 auto
+                    position: relative
+
+                    .selected
+                        position: absolute
+                        width: 18px
+                        height: 18px
+                        background-color: #7ED321
+                        border-radius: 50%
+                        border: 1px solid white
+                        position: absolute
+                        display: none
+                        .material-icons
+                            font-size: 16px
+                            color: #ffffff
+
+                    img
+                        width: 100%
+                        height: 100%
+                        border-radius: 50%
+                        border: 1px solid #E4E4E4
+
+                .iconlist-meta
+                    width: 100%
+                    p
+                        text-align: center
+
+                &.form--iconlist-add
+                    .iconlist-img
+                        .material-icons
+                            font-size: 60px
+                            color: #EEEEEE
+
+                &.active
+                    .selected
+                        display: block
+
+
+
+.modal
+    position: fixed
+    top: 0px
+    left: 0px
+    z-index: 1000
+    right: 0px
+    bottom: 0px
+
+    .mdl-dialog
+        margin: 100px auto 0
+        z-index: 1
+        position: relative
+        background-color: white
+
+
+    .backdrop
+        position: absolute
+        top: 0px
+        left: 0px
+        right: 0px
+        bottom: 0px
+        background-color: rgba(0, 0, 0, 0.3)

@@ -1,0 +1,24 @@
+<li class="form--iconlist-default" ng-repeat="user in familyMembers track by $index" ng-click="setUser( user )" ng-class="isActive( user )">
+    <div class="iconlist-img">
+        <div class="selected">
+            <i class="material-icons">done</i>
+        </div>
+        <img ng-src="{{user.img}}" />
+    </div>
+    <div class="iconlist-meta">
+        <p>
+            {{ user.name }}
+        </p>
+    </div>
+    <p class="iconlist-or">or</p>
+</li>
+<li class="form--iconlist-add" ng-click="addUser()">
+    <div class="iconlist-img">
+        <i class="material-icons">add_circle</i>
+    </div>
+    <div class="iconlist-meta">
+        <p>
+            Someone Else
+        </p>
+    </div>
+</li>

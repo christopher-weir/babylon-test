@@ -1,8 +1,17 @@
-<li ng-repeat="type in professionals" ng-click="setType( type )">
-    <p>
-        {{ type.label }}
-    </p>
-    <p ng-if="type.subLabel">
-        subLabel: {{ type.subLabel }}
-    </p>
+<li class="form--iconlist-default" ng-repeat="type in professionals" ng-click="setType( type )" ng-class="isActive( type )">
+    <div class="iconlist-img">
+        <div class="selected">
+            <i class="material-icons">done</i>
+        </div>
+        <img ng-src="./img/user.png" />
+    </div>
+    <div class="iconlist-meta">
+        <p>
+            {{ type.label }}
+        </p>
+        <p ng-if="type.subLabel">
+            subLabel: {{ type.subLabel }}
+        </p>
+    </div>
+    <p class="iconlist-or">or</p>
 </li>

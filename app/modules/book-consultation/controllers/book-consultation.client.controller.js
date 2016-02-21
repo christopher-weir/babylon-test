@@ -2,18 +2,23 @@
 
 angular.module('book-consultation').controller('BookConsultationCtrl', [
     '$scope',
+    '$rootScope',
     'ProfessionalsService',
-    function( $scope, ProfessionalsService ) {
+    function( $scope, $rootScope, ProfessionalsService ) {
         console.log('this is working book-consultation');
 
         $scope.consultationForm = null;
 
         $scope.consultationFormData = {
             user: {},
-            professionalType: {}
+            professionalType: {},
+            time: null
         };
 
 
+        $rootScope.$on('add-user', function(event, args) {
+            $scope.familyMembers.push( args );
+        });
 
 
         $scope.professionals = ProfessionalsService.getAvaliable();
@@ -22,11 +27,11 @@ angular.module('book-consultation').controller('BookConsultationCtrl', [
         $scope.familyMembers = [
             {
                 name: 'bob',
-                img: './img/test.jpg'
+                img: './img/user.png'
             },
             {
                 name: 'bob 2',
-                img: './img/test.jpg'
+                img: './img/user.png'
             }
         ];
 
