@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('book-consultation')
-    .directive('professionalTypes', [
+    .directive('formProfessionals', [
         function(  ) {
             return {
 
@@ -28,7 +28,7 @@ angular.module('book-consultation')
 
                 },
 
-                templateUrl:   'app/modules/book-consultation/views/professional-types.client.view.html'
+                templateUrl:   'app/modules/book-consultation/views/form-professionals.client.view.html'
             };
         }
     ]

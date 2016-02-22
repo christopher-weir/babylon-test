@@ -1,5 +1,7 @@
 'use strict';
 
+// really basic modal directive as i dont have time to
+// add ngmaterial just for a modal popup
 angular.module('core')
     .directive('addModal', [
         '$rootScope',
@@ -7,7 +9,7 @@ angular.module('core')
             return {
                 restrict: 'E',
                 scope:{
-                    title : '=?title',
+                    title : '=?title'
                 },
                 controller : '@',
                 name: 'controllerName',
@@ -24,8 +26,8 @@ angular.module('core')
                         angular.element( element ).remove();
                     });
 
-                    attrs.$observe( 'ver',function(v){
-                       scope.contentUrl = v;
+                    attrs.$observe( 'view',function( _view ){
+                       scope.contentUrl = _view;
                     });
                 },
                 template: '<div class="modal">' +

@@ -1,0 +1,5 @@
+<ul>
+    <li ng-repeat="time in times | orderBy : times" ng-click="setTime( time )">
+        {{ time | date:'MMMM dd @ HH:mm' }}
+    </li>
+</ul>

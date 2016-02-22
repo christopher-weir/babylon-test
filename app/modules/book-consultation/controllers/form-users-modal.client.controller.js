@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('book-consultation').controller('AddUserCtrl', [
+angular.module('book-consultation').controller('FormUsersModalCtrl', [
     '$scope',
     '$rootScope',
     function( $scope, $rootScope ) {
@@ -12,7 +12,6 @@ angular.module('book-consultation').controller('AddUserCtrl', [
 
 
         $scope.addNewUser = function( _user ){
-            console.log(_user);
             $rootScope.$broadcast('add-user', _user );
             $rootScope.$broadcast( 'close-modal' );
         };
