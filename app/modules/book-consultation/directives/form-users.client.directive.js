@@ -40,6 +40,11 @@ angular.module('book-consultation')
                         }
                     };
 
+                    scope.$on('$destroy', function() {
+                        // cleanup
+                        scope.familyMembers = [];
+                    });
+
                 },
                 templateUrl:   'app/modules/book-consultation/views/form-users.client.view.html'
             };

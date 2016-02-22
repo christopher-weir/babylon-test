@@ -43,7 +43,7 @@
                     <h4>Select the {{ consultationFormData.professionalType.label }}</h4>
                 </header>
 
-                <div class="form--content" form-drs  ng-model="consultationFormData.professional" professionals="consultationFormData.professionalType.professionals"></div>
+                <div class="form--content" form-drs type="consultationFormData.professionalType.label"  ng-model="consultationFormData.professional" professionals="consultationFormData.professionalType.professionals"></div>
             </div>
 
 
@@ -56,11 +56,28 @@
             </div>
 
 
-            <div class="mdl-card__actions form--section">
+            <div class="mdl-card__actions form--section" ng-if="consultationFormData.professional">
+                <div class="form--content">
+                    <div class="form--btn-wrap form--btn-wrap-book">
+                        <button class="book" ng-click="book( consultationFormData )">
+                            Book consultation
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-                <h4>Book this consultation for</h4>
+
+            <div class="mdl-card__actions form--section" ng-if="showSuccess">
+
+                <h4>Success</h4>
                 <p>
-                    {{ consultationFormData }}
+                    <strong>User Name: </strong>{{ consultationFormData.user.name }}
+                </p>
+                <p>
+                    <strong>Professional Name: </strong>{{ consultationFormData.professional.name }} a {{ consultationFormData.professionalType.label }}
+                </p>
+                <p>
+                    <strong>At: </strong>{{ consultationFormData.time | date:'MMMM dd @ HH:mm' }}
                 </p>
             </div>
 

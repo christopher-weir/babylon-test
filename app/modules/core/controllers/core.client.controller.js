@@ -2,9 +2,13 @@
 
 angular.module('core').controller('CoreCtrl', [
     '$scope',
-    function( $scope ) {
-        console.log('this is working');
+    '$state',
+    function( $scope, $state ) {
 
-        $scope.bob = true;
+        $scope.isActiveView = function( _view ){
+            if( _view === $state.current.name ){
+                return 'is-active';
+            }
+        };
     }
 ]);

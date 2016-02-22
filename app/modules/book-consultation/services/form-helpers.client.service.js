@@ -7,6 +7,14 @@ angular.module('book-consultation')
 
             return {
 
+                /**
+                 * findNextAvaliableProfessional
+                 * Loop through the drs and their times to find the next avaliable
+                 * @method function
+                 * @param  {Array} _professionals  Array of the professionals
+                 * @return {Object}                The next avaliable
+                 * professional by time 'avaliable'
+                 */
                 findNextAvaliableProfessional: function( _professionals ){
 
                     var i = 0;
@@ -33,6 +41,14 @@ angular.module('book-consultation')
                     return nextAval;
                 },
 
+                /**
+                 * findNextAvaliableTime
+                 * Loop through the times and find the
+                 * next avaliable
+                 * @method function
+                 * @param  {Array} _times The selected prof times
+                 * @return {Number}        The next avaliable
+                 */
                 findNextAvaliableTime: function( _times ){
 
                     var i = 0;

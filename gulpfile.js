@@ -6,7 +6,7 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var html2js = require('gulp-html2js');
-
+var Server = require('karma').Server;
 
 var defaultAssets = {
     sass: [
@@ -137,7 +137,10 @@ gulp.task('watch', ['webserver'], function() {
 });
 
 
-
+/**
+ * 'gulp'
+ * Default
+ */
 gulp.task('default', [
     'buildLib',
     'buildTemplates',
@@ -146,3 +149,15 @@ gulp.task('default', [
     'webserver',
     'watch'
 ]);
+
+
+/**
+ * 'gulp test'
+ * Run test once and exit
+ */
+gulp.task('test', function (done) {
+  new Server({
+    configFile: __dirname + '/my.conf.js',
+    singleRun: false
+  }, done).start();
+});

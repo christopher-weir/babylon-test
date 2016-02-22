@@ -5,14 +5,14 @@ angular.module('book-consultation').controller('FormUsersModalCtrl', [
     '$rootScope',
     function( $scope, $rootScope ) {
 
-        $scope.newUser = {
-            name: '',
-            img: './img/user.png'
-        };
+        $scope.newUserName = '';
 
 
-        $scope.addNewUser = function( _user ){
-            $rootScope.$broadcast('add-user', _user );
+        $scope.addNewUser = function( _userName ){
+            $rootScope.$broadcast('add-user', {
+                name: _userName,
+                img: './img/user.png'
+            });
             $rootScope.$broadcast( 'close-modal' );
         };
     }

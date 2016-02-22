@@ -15,17 +15,21 @@ module.exports = function(config) {
         frameworks: ['jasmine'],
 
 
-        // list of files / patterns to load in the browser
+        // Karma can be annoying with globbing so just adding the manually
         files: [
             'bower_components/angular/angular.js',
             'bower_components/angular-mocks/angular-mocks.js',
             'bower_components/angular-ui-router/release/angular-ui-router.js',
-            './app/modules/core/app/config.js',
-            './app/modules/core/app/init.js',
-            './app/modules/core/*.js',
-            './app/modules/!(core)/*.js',
-            './app/modules/*/!(app)/*.js',
-            'test/*/*.test.js'
+            'app/modules/core/app/config.js',
+            'app/modules/core/app/init.js',
+            'app/modules/core/core.client.module.js',
+            'app/modules/book-consultation/book-consultation.client.module.js',
+
+            'app/modules/core/services/professionals.client.service.js',
+            'app/modules/book-consultation/services/form-helpers.client.service.js',
+
+            'test/core/core.test.js',
+            'test/core/book-consultation.test.js'
         ],
 
 
@@ -72,6 +76,10 @@ module.exports = function(config) {
 
         // Concurrency level
         // how many browser should be started simultaneous
-        concurrency: Infinity
+        concurrency: Infinity,
+
+        client: {
+            captureConsole: true
+        }
     });
 };

@@ -52,7 +52,6 @@ angular.module('book-consultation')
 
 
                     scope.$watch('times', function() {
-
                         if( scope.times ){
                             findNextAvaliable( scope.times );
                         }

@@ -4,7 +4,6 @@ angular.module('book-consultation').controller('FormAppointmentModalCtrl', [
     '$scope',
     '$rootScope',
     function( $scope, $rootScope ) {
-        console.log($scope.$parent.times);
 
         $scope.times = $scope.$parent.times;
         // $scope.professionals = $scope.$parent.professionals;

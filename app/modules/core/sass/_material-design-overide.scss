@@ -3,6 +3,10 @@ html {
     height: 100%;
 }
 
+body {
+    height: 100%;
+}
+
 
 .mdl-layout__header {
     min-height: 1px;
@@ -22,21 +26,6 @@ html {
 .section--center {
     max-width: 860px;
 }
-
-.is-active::after {
-    height: 2px;
-    width: 100%;
-    display: block;
-    content: " ";
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    background: #ffffff;
-    -webkit-animation: border-expand .2s cubic-bezier(.4,0,.4,1).01s alternate forwards;
-    animation: border-expand .2s cubic-bezier(.4,0,.4,1).01s alternate forwards;
-    transition: all 1s cubic-bezier(.4,0,1,1);
-}
-
 
 
 .page-title {

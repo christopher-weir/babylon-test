@@ -1,0 +1,63 @@
+
+.modal
+    position: fixed
+    top: 0px
+    left: 0px
+    z-index: 1000
+    right: 0px
+    bottom: 0px
+
+    .mdl-dialog
+        margin: 100px auto 0
+        z-index: 1
+        position: relative
+        background-color: white
+
+
+    .backdrop
+        position: absolute
+        top: 0px
+        left: 0px
+        right: 0px
+        bottom: 0px
+        background-color: rgba(0, 0, 0, 0.3)
+
+// mdl overides
+.mdl-dialog
+    header
+        background-color: #638AC0
+
+        h4
+            text-align: center
+            color: white
+            font-size: 16px
+
+    .mdl-dialog__actions
+
+
+    .mdl-button
+        background-color: #B7B4B1
+        color: white
+        font-weight: 300
+        padding: 5px 50px
+        border: none
+        border-radius: 2px
+        cursor: pointer
+        font-size: 16px
+        line-height: 20px
+
+
+.mdl-dialog__content
+    ul
+        padding: 0px
+        margin: 0px
+        width: 100%
+        list-style: none
+
+        li
+            text-align: center
+            padding: 5px 0px
+            color: black
+            cursor: pointer
+            &:hover
+                background-color: #EEEEEE

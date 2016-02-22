@@ -1,2 +1,30 @@
-.header
-    background-color: red
+.is-active
+    &::after
+        height: 2px
+        width: 100%
+        display: block
+        content: " "
+        bottom: 0
+        left: 0
+        position: absolute
+        background: #ffffff
+        -webkit-animation: border-expand .2s cubic-bezier(.4,0,.4,1).01s alternate forwards
+        animation: border-expand .2s cubic-bezier(.4,0,.4,1).01s alternate forwards
+        transition: all 1s cubic-bezier(.4,0,1,1)
+
+
+
+.mdl-layout__tab-link
+    &:hover
+        &::after
+            height: 2px
+            width: 100%
+            display: block
+            content: " "
+            bottom: 0
+            left: 0
+            position: absolute
+            background: #ffffff
+            -webkit-animation: border-expand .2s cubic-bezier(.4,0,.4,1).01s alternate forwards
+            animation: border-expand .2s cubic-bezier(.4,0,.4,1).01s alternate forwards
+            transition: all 1s cubic-bezier(.4,0,1,1)

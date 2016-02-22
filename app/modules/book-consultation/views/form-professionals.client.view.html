@@ -1,4 +1,4 @@
-<li class="form--iconlist-default" ng-repeat="type in professionals" ng-click="setType( type )" ng-class="isActive( type )">
+<li class="form--iconlist-default form--iconlist-professionals" ng-repeat="type in professionals" ng-click="setType( type )" ng-class="isActive( type )">
     <div class="iconlist-img">
         <div class="selected">
             <i class="material-icons">done</i>
@@ -9,8 +9,8 @@
         <p>
             {{ type.label }}
         </p>
-        <p ng-if="type.subLabel">
-            subLabel: {{ type.subLabel }}
+        <p ng-if="type.subLabel" class="iconlist-meta--sub">
+            {{ type.subLabel }}
         </p>
     </div>
     <p class="iconlist-or">or</p>

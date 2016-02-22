@@ -11,6 +11,7 @@ angular.module('book-consultation')
                 require: 'ngModel',
                 scope: {
                     professionals : '=professionals',
+                    type : '=type',
                     ngModel: '='
                 },
                 link: function(scope, element, attrs, ngModel ) {
