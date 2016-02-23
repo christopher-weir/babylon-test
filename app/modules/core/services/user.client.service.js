@@ -60,6 +60,32 @@ angular.module('core')
                 getUserFamily: function(){
                     // Again im only guessing you use a REST api
                     return currentUserFamily;
+                },
+
+                /**
+                 * getUserFamily
+                 * @method function
+                 * @return {Array} An array of the users family
+                 */
+                getUsers: function(){
+                    // Again im only guessing you use a REST api
+                    return [
+                        {
+                            name: 'Tom Erica',
+                            img: './img/user.png',
+                            history: []
+                        },
+                        {
+                            name: 'Bee Erma',
+                            img: './img/user.png',
+                            history: []
+                        },
+                        {
+                            name: 'Garfield Tammy',
+                            img: './img/user.png',
+                            history: []
+                        }
+                    ];
                 }
 
             };

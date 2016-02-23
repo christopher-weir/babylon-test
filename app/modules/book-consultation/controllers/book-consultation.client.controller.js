@@ -11,23 +11,7 @@ angular.module('book-consultation').controller('BookConsultationCtrl', [
         $scope.showSuccess = false;
 
         // construct the initial users list
-        $scope.familyMembers = [
-            {
-                name: 'Tom Erica',
-                img: './img/user.png',
-                history: []
-            },
-            {
-                name: 'Bee Erma',
-                img: './img/user.png',
-                history: []
-            },
-            {
-                name: 'Garfield Tammy',
-                img: './img/user.png',
-                history: []
-            }
-        ];
+        $scope.familyMembers = UserService.getUsers();
 
         // Get the avaliable professionals
         $scope.professionals = ProfessionalsService.getAvaliable();
