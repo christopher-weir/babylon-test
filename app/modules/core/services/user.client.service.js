@@ -63,9 +63,9 @@ angular.module('core')
                 },
 
                 /**
-                 * getUserFamily
+                 * getUsers
                  * @method function
-                 * @return {Array} An array of the users family
+                 * @return {Array} An array of the users
                  */
                 getUsers: function(){
                     // Again im only guessing you use a REST api
