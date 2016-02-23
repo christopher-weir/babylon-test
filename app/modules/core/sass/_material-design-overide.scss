@@ -23,6 +23,23 @@ body {
     font-weight: 200;
 }
 
+.mdl-layout__content {
+    section {
+        &:last-child {
+            margin-bottom: 100px;
+        }
+    }
+}
+
+.mdl-card__supporting-text {
+    header {
+        h4 {
+            color: #827096;
+            font-weight: 300;
+        }
+    }
+}
+
 .section--center {
     max-width: 860px;
 }
