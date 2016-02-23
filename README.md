@@ -47,5 +47,5 @@ I didnt know what testing framework you use so I guessed karma. I just created a
 
 ---
 ### <a name="notes"></a>Notes
-There was no time specified on the test so I only gave myself a few hours to complete the task.
+There was no time specified on the test so I only gave myself a few hours ( spread over the weekend and monday afternoon ) to complete the task.
 There are obviously things missing like the footer. I didnt write any ajax posts. I think I have some examples on my github demonstrating that I can, If not I can supply them. I have only tested in chrome mac.
